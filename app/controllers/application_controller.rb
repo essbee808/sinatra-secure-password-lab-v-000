@@ -17,6 +17,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/signup" do
+    if 
     user = User.new(:username => params[:username], :password => params[:password])
     
     if user.save
