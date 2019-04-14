@@ -5,6 +5,7 @@ class Users < ActiveRecord::Migration[5.1]
       t.string :username
     end
   def down
+    drop_table :users
   end
   end
 end
