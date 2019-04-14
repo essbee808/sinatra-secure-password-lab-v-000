@@ -18,6 +18,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/signup" do
+    binding.pry
     if params[:username] == "" || params[:password] == ""
       puts "fail"
       redirect "/failure"
@@ -27,7 +28,7 @@ class ApplicationController < Sinatra::Base
       puts "success"
       redirect "/login"
     end
-    binding.pry
+    
   end
 
   get '/account' do
