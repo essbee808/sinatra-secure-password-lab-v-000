@@ -27,6 +27,7 @@ class ApplicationController < Sinatra::Base
       puts "success"
       redirect "/login"
     end
+    binding.pry
   end
 
   get '/account' do
